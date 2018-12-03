@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+table.grid {
+    width:100%;
+    border:none;
+    background-color:#F6F4F0;
+    padding:0px;    
+}
+table.grid tr {
+    text-align:center;
+}
+table.grid td {
+    border:4px solid white;
+    padding:6px;     
+}
+.w3-table-all tr:nth-child(odd)
+{
+	background-color: #fff;
+}
+.w3-bordered tr, .w3-table-all tr{
+	border-bottom: 1px solid #ddd;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>Hello World!</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8</div>
+  </div>
+
+ <div class="row">
+	<div class="col-xs-12">
+		<br/><br/>
+		Bootstrap Grid System
+		Bootstrap's grid system allows up to 12 columns across the page.
+
+		If you do not want to use all 12 column individually, you can group the columns together to create wider columns:
+		<br/><br/>
+		<div class="table-responsive">
+		<table class="grid" cellspacing="0">
+		<tbody><tr>
+		  <td>span 1</td>
+		  <td>span 1</td>  
+		  <td>span 1</td>
+		  <td>span 1</td>
+		  <td>span 1</td>  
+		  <td>span 1</td>
+		  <td>span 1</td>
+		  <td>span 1</td>  
+		  <td>span 1</td>
+		  <td>span 1</td>
+		  <td>span 1</td>  
+		  <td>span 1</td>
+		</tr>
+		<tr>
+		  <td colspan="4">&nbsp;span 4</td>
+		  <td colspan="4">&nbsp;span 4</td>  
+		  <td colspan="4">&nbsp;span 4</td>
+		</tr>
+		<tr>
+		  <td colspan="4">span 4</td>
+		  <td colspan="8">span 8</td>  
+		</tr>
+		<tr>
+		  <td colspan="6">span 6</td>
+		  <td colspan="6">span 6</td>  
+		</tr>
+		<tr>
+		  <td colspan="12">span 12</td>
+		</tr>
+		</tbody></table>
+		</div>
+	</div>
+ </div>
+<br/><br/>
+Bootstrap's grid system is responsive, and the columns will re-arrange depending on the screen size: On a big screen it might look better with the content organized in three columns, but on a small screen it would be better if the content items were stacked on top of each other.<br/>
+
+<div class="row">
+	<div class="col-xs-12" style="background-color: #ffffcc; border-left: 6px solid #ffeb3b; padding: 0.01em 16px; margin-top: 16px!important; margin-bottom: 16px!important">
+<p><strong>Tip:</strong> Remember that grid columns should add up to twelve for a 
+row. More than that, columns will stack no matter the viewport.</p>
+</div>
+
+<h2>Grid System Rules</h2>
+<p>Some Bootstrap grid system rules:</p>
+<ul>
+  <li>Rows must be placed within a <code class="w3-codespan">.container</code> (fixed-width) or <code class="w3-codespan">.container-fluid</code> (full-width) for proper alignment and padding</li>
+  <li>Use rows to create horizontal groups of columns</li>
+  <li>Content should be placed within columns, and only columns may be immediate children of rows</li>
+  <li>Predefined classes like <code class="w3-codespan">.row </code>and <code class="w3-codespan">.col-sm-4</code> are available for quickly making grid layouts</li>
+  <li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on <code class="w3-codespan">.rows</code></li>
+  <li>Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three <code class="w3-codespan">.col-sm-4</code></li>
+</ul>
+
+<h2>Grid Options</h2>
+<p>The following table summarizes how the Bootstrap grid system works across multiple devices:</p>
+<div class="table-responsive">
+<table class="w3-table-all notranslate" style="margin: 20px 0; border: 1px solid #ccc; border-collapse: collapse; border-spacing: 0; width: 100%; display: table; background-color: transparent">
+  <tbody><tr>
+    <th style="width:22%;">&nbsp;</th>
+    <th style="width:19%;">Extra small devices<br>Phones (&lt;768px)</th>
+    <th style="width:20%;">Small devices<br>Tablets (&gt;=768px)</th>
+    <th style="width:21%;">Medium devices<br>Desktops (&gt;=992px)</th>
+    <th style="width:18%;">Large devices<br>Desktops (&gt;=1200px)</th>
+  </tr>
+  <tr>
+    <td><strong>Grid behaviour</strong></td>
+    <td>Horizontal at all times</td>
+    <td>Collapsed to start, horizontal above breakpoints</td>
+    <td>Collapsed to start, horizontal above breakpoints</td>
+    <td>Collapsed to start, horizontal above breakpoints</td>        
+  </tr>
+  <tr>
+    <td><strong>Container width</strong></td>
+    <td>None (auto)</td>
+    <td>750px</td>
+    <td>970px</td>
+    <td>1170px</td>
+  </tr>
+  <tr>
+    <td><strong>Class prefix</strong></td>
+    <td>.col-xs-</td>
+    <td>.col-sm-</td>
+    <td>.col-md-</td>
+    <td>.col-lg-</td>
+  </tr>
+  <tr>
+    <td><strong>Number of columns</strong></td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>    
+  </tr>
+  <tr>
+    <td><strong>Column width</strong></td>
+    <td>Auto</td>
+    <td>~62px</td>
+    <td>~81px</td>
+    <td>~97px</td>
+  </tr>
+  <tr>
+    <td><strong>Gutter width</strong></td>
+    <td>30px (15px on each side of a column)</td>
+    <td>30px (15px on each side of a column)</td>
+    <td>30px (15px on each side of a column)</td>
+    <td>30px (15px on each side of a column)</td>
+  </tr>
+  <tr>
+    <td><strong>Nestable</strong></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Offsets</strong></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><strong>Column ordering</strong></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+</div>
+	</div>
+</div>
+</div>
+</div>
+    
+</body>
+</html>
